@@ -61,7 +61,7 @@ end
 grid_size = median(densities);
 votsforK = zeros(1, numScans);
 for sId = 1 : numScans
-    Result_clus = clustering(Results{sId}, Para.grid_size_rot, Para.maxK);
+    Result_clus = clustering(Results{sId}, grid_size, Para.maxK);
     ws = Result_clus.weights;
     curve = ws(1:(length(ws)-2)) - 2*ws(2:(length(ws)-1)) + ws(3:length(ws));
     [~,off] = max(curve);
@@ -147,7 +147,7 @@ for id = 1 : num
     data(1:9, id) = reshape(Result.R_opts{id}, [9,1]);
     data(10:12,id) = Result.t_opts{id};
 end
-[IDX, DIS] = knnsearch(data', data', 'k', min(10, num));
+[IDX, DIS] = knnsearch(data', data', 'k', min(6, num));
 density = min(median(DIS'));
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Minimum distance between two point clouds
