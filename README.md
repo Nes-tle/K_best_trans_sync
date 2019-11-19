@@ -9,6 +9,7 @@ save_pcs(pc, Results, 'scans/'); % Save the transformed point cloud for visualiz
 The code requires a minimum number of parameters. The code works for both dense graphs and sparse graphs. 
 
 If you use the code for comparison, please cite the paper accordingly. 
+
 @InProceedings{Sun_2019_ICCV,
 author = {Sun, Yifan and Zhuo, Jiacheng and Mohan, Arnav and Huang, Qixing},
 title = {K-Best Transformation Synchronization},
