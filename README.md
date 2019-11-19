@@ -2,8 +2,9 @@ This code repository implements the following ICCV 2019 paper:
 K-Best Transformation Synchronization. Yifan Sun, Jiacheng Zhuo, Arnav Mohan, Qixing Huang; The IEEE International Conference on Computer Vision (ICCV), 2019, pp. 10252-10261 
 % Sample code:
 
->>Results = k_best_sync(pairmatches, Para);
->>save_pcs(pc, Results, 'scans/');
+Results = k_best_sync(pairmatches, Para); % Perform K-best transformation synchronization
+
+save_pcs(pc, Results, 'scans/'); % Save the transformed point cloud for visualization
 
 The code requires a minimum number of parameters. The code works for both dense graphs and sparse graphs. 
 
